@@ -6,7 +6,7 @@ Learnat is a modern e-learning platform that enables users to access resources f
 
 ## 🚀 Demo video
 
-🔗 [Watch demo](https://drive.google.com/file/d/1-TxZ-I4bC69eMC0mfAMt0bij9A_8waBy/view?usp=share_link)
+🔗 [Watch demo](https://drive.google.com/file/d/1jz7lyobvWH7E5B1vVuNW5lCPDH9DftMz/view?usp=share_link)
 
 
 ---
