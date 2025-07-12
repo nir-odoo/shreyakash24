@@ -1,7 +1,4 @@
-import React, { useEffect } from "react";
-const [skillsHave, setSkillsHave] = useState("");
-const [skillsWant, setSkillsWant] = useState("");
-const [matches, setMatches] = useState([]);
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/style.css";
 import mainImg from "../assets/images/main.png";
@@ -14,6 +11,10 @@ import c3 from "../assets/images/c3.png";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [skillsHave, setSkillsHave] = useState("");
+  const [skillsWant, setSkillsWant] = useState("");
+  const [matches, setMatches] = useState([]);
+
   const handleSkillSwap = () => {
     const username = localStorage.getItem("username");
   
