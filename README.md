@@ -25,7 +25,7 @@ Learnat is a modern e-learning platform that enables users to access resources f
 
 | Frontend        | Backend          | Database            | Others                         |
 |-----------------|------------------|----------------------|--------------------------------|
-| HTML,CSS(Vanilla & Bootstrap),React,vite | Node.js / Express| MongoDB | Password hashing|
+| HTML,CSS(Vanilla & Bootstrap),React,vite | Node.js / Express| MongoDB | Password hashing (bcrypt)|
 
 ---
 
