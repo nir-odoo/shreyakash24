@@ -16,7 +16,7 @@ Learnat is a modern e-learning platform that enables users to access resources f
 - ✅ **Skill Swap System** – Trade your skills with other users in real-time
 - 📹 **Course Content** – Access lessons, videos, and notes
 - 🧑‍🏫 **Mentor & Learner Roles** – Be both a teacher and a student
-- 🔒 **Authentication & Authorization** – Secure login with JWT/OAuth
+- 🔒 **Authentication & Authorization** – Secure login with password hashing using bcrypt
 - 🧩 **Modular Architecture** – Easily extend functionality
 
 ---
