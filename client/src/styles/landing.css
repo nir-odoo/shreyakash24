@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+body {
+    color: #333;
+    min-height: 100vh;
+}
+#right\ part {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    flex-direction: row-reverse;
+}
+video {
+    height:35vw;
+    width: 35vw;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#f17b97,#f6a77a,#eba68d);
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3rem 7rem 3rem 7rem;
+    display: flex;
+    gap: 3rem;
+    margin: auto;
+    min-height: 20rem;
+}
+.sub-content{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    color:whitesmoke;
+    border-radius: 10%;
+}
+.subject{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    font-size: 4rem;
+    font-style:oblique;
+    background: linear-gradient(135deg,#f17b97,#f6a77a,#eba68d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10%;
+}
+
+footer {
+    width:100%;
+    background-color: #3a3737fc;
+    position:relative;
+    bottom:0;
+    margin-top: auto;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: small;
+    font-family: Georgia;
+}
+footer p,hr{
+    margin:15px;
+    bottom:0;
+}
+
+#navigation{  
+    width: 20%;
+    min-width: 110px;  
+}
+#navigation nav{
+    display:flex;
+    width:90%;
+    gap: 30%;
+    justify-content: space-around;
+}
+#navigation button{
+    color:#082746;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    height: 3em;
+    width: 5em;
+    background: linear-gradient(135deg,#cc143f,#cb5917,#e98c6a);
+    border-radius: 50% ;
+    border: none;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    color: whitesmoke;
+}
+#navigation button:hover{
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(247, 170, 170, 0.983);
+}
+#social a {
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+#social{
+    padding: 10px;
+}
+#social a:hover {
+    color: #005bb5;
+}
+
+@media (max-width: 600px){
+    .content{
+        margin-bottom: 20%;
+    }
+}

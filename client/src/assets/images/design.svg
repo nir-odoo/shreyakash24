@@ -1,0 +1,21 @@
+<svg class="hero-bg" viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <defs>
+          <!-- Gradient: dark → light → dark -->
+          <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#94caff" />
+            <stop offset="50%" stop-color="#d4edff" />
+            <stop offset="100%" stop-color="#94caff" />
+          </linearGradient>
+      
+          <!-- Off-white puffs -->
+          <radialGradient id="puff" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      
+        <!-- Original wave, scaled down -->
+        <path fill="url(#cloudGradient)" fill-opacity="1"
+          d="M0,80L48,80C96,80,192,80,288,69.3C384,58.5,480,37.5,576,40C672,42.5,768,69.5,864,80C960,90.5,1056,85.5,1152,77.3C1248,69.5,1344,58.5,1392,53.3L1440,48V0H0Z">
+        </path>
+</svg> 
