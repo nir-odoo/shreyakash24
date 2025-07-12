@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+const [skillsHave, setSkillsHave] = useState("");
+const [skillsWant, setSkillsWant] = useState("");
+const [matches, setMatches] = useState([]);
 import { useNavigate } from "react-router-dom";
 import "../styles/style.css";
 import mainImg from "../assets/images/main.png";
@@ -11,7 +14,45 @@ import c3 from "../assets/images/c3.png";
 
 const Home = () => {
   const navigate = useNavigate();
-
+  const handleSkillSwap = () => {
+    const username = localStorage.getItem("username");
+  
+    if (!username) {
+      alert("Please log in to use skill swap.");
+      return;
+    }
+  
+    fetch("http://127.0.0.1:5050/api/update-skills", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        skillsHave: skillsHave.split(",").map(skill => skill.trim()),
+        skillsWant: skillsWant.split(",").map(skill => skill.trim()),
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        return fetch("http://127.0.0.1:5050/api/skill-swap", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username }),
+        });
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        setMatches(data.matches);
+      })
+      .catch((err) => {
+        console.error("Error during skill swap:", err);
+        alert("Something went wrong.");
+      });
+  };
+  
   useEffect(() => {
     const body = document.querySelector("body");
     const menuButton = document.getElementById("menu");
@@ -146,7 +187,15 @@ reviewRightArrow?.addEventListener("click", () => {
   return (
     <div id="wrap">
       <header id="header">
-        <div id="left part">
+      <div id="right-part">
+          <div id="navigation">
+            <nav>
+              <a className="login-link">Logout</a>
+              <a className="signup-link">Signout</a>
+            </nav>
+          </div>
+        </div>
+        <div id="left-part">
           <button id="menu">
             <img src={hamburger} alt="menu" />
           </button>
@@ -157,14 +206,6 @@ reviewRightArrow?.addEventListener("click", () => {
           <div id="search">
             <input type="text" placeholder="What do you want to learn..." />
             <button id="searchbtn">Search</button>
-          </div>
-        </div>
-        <div id="right part">
-          <div id="navigation">
-            <nav>
-              <a className="login-link">Logout</a>
-              <a className="signup-link">Signout</a>
-            </nav>
           </div>
         </div>
       </header>
@@ -256,6 +297,40 @@ reviewRightArrow?.addEventListener("click", () => {
         </div>
         <button className="arrow right-arrow" aria-label="Scroll right">&#8594;</button>
       </div>
+      <section id="skill-swap">
+  <h2>🔁 Skill Swap</h2>
+  <p>Enter what you can teach and what you want to learn</p>
+  <div className="swap-form">
+    <input
+      type="text"
+      placeholder="Skills you HAVE (comma separated)"
+      value={skillsHave}
+      onChange={(e) => setSkillsHave(e.target.value)}
+    />
+    <input
+      type="text"
+      placeholder="Skills you WANT (comma separated)"
+      value={skillsWant}
+      onChange={(e) => setSkillsWant(e.target.value)}
+    />
+    <button onClick={handleSkillSwap}>Find Matches</button>
+  </div>
+
+  {matches.length > 0 && (
+    <div className="match-results">
+      <h3>🎯 Matching Users</h3>
+      <ul>
+        {matches.map((match, i) => (
+          <li key={i}>
+            <strong>{match.username}</strong> <br />
+            <span>Has: {match.skillsHave.join(", ")}</span><br />
+            <span>Wants: {match.skillsWant.join(", ")}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</section>
 
       <footer>
         <nav id="links">

@@ -9,11 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(rgba(39, 39, 48, 0.906), rgba(110, 182, 204, 0.3)),
-              url('../assets/images/image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .box {
@@ -29,11 +24,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .box h2 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color: #1f0202;
     font-weight: bold;
 }
@@ -41,7 +35,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 input {
@@ -60,7 +54,7 @@ button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
@@ -70,7 +64,7 @@ button[type="submit"]:hover {
 
 p {
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 10px;
     color: #1f0202;
 }
 

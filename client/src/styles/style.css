@@ -41,7 +41,7 @@
     box-shadow: 0 8px 6px rgba(54, 171, 217, 0.1);
 }
 
-#left\ part {
+#left-part {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -85,7 +85,7 @@
 }
 
 /* Navigation */
-#right\ part {
+#right-part {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -264,10 +264,10 @@ article {
     z-index: 10;
 }
 #courses .arrow{
-    top: 80rem;
+    top: 106rem;
 }
 #review .arrow{
-    top: 106rem;
+    top: 133rem;
 }
 .left-arrow {
     left: 60px;
@@ -374,7 +374,48 @@ footer p,hr{
 #social a:hover {
     color: #005bb5;
 }
-
+#skill-swap {
+    padding: 2rem;
+    background: #f4f4f4;
+    border-top: 2px solid #ddd;
+    margin-top: 2rem;
+  }
+  
+  .swap-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .swap-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .swap-form button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .match-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .match-results li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+  }
+  
 @media(max-width: 600px){
     #sidebar-content .login-link, #sidebar-content .signup-link{
         display:block;

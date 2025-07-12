@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/style_logins.css'; 
 import bgImage from '../assets/images/image.jpg';
+const Style = {
+  background: `linear-gradient(rgba(39, 39, 48, 0.906), rgba(110, 182, 204, 0.3)), url(${bgImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  minHeight: '100vh',
+  color: '#333'
+};
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -32,7 +39,7 @@ function Login() {
   };
 
   return (
-    <div className="wrap">
+    <div className="wrap" style={Style}>
     <div className="box">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
