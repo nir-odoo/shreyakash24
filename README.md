@@ -29,5 +29,32 @@ Learnat is a modern e-learning platform that enables users to access resources f
 
 ---
 
-## 📁 Project Structure
+## 🔮 Future Scope
+
+SkillSwap is designed to be scalable and community-driven. Planned future developments include:
+
+- 🌍 **Global Skill Marketplace**  
+  Enable users to offer paid or free sessions, creating a sustainable gig-economy for educators and learners.
+
+- 🤖 **AI-Powered Matching System**  
+  Use AI to match users based on skill proficiency, interests, and learning goals for more effective skill exchanges.
+
+- 🎓 **Certified Learning Paths**  
+  Introduce verified, trackable learning paths and skill certifications issued by the platform.
+
+- 🧩 **Plugin & Extension System**  
+  Allow developers to build custom modules, lessons, or integrations into the platform.
+
+- 🌐 **Multilingual Support & Localization**  
+  Broaden accessibility by supporting multiple languages and region-specific content.
+
+- 🧠 **Gamification**  
+  Add points, badges, leaderboards, and challenges to boost engagement and motivation.
+
+- 📊 **Advanced Analytics**  
+  Offer learners and mentors detailed performance dashboards and engagement metrics.
+
+---
+
+
 
